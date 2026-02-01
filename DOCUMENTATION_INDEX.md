@@ -2,13 +2,13 @@
 
 ## Quick Navigation Guide
 
-Welcome to your enhanced Real Estate Management System! Use this index to find exactly what you need.
+Welcome to My enhanced Real Estate Management System! Use this index to find exactly what you need.
 
 ---
 
 ## 🎯 QUICK START (Pick One)
 
-### I want to...
+### If you want to...
 
 **...get a quick overview of what was added**
 → Start with [README_ENHANCEMENTS.md](README_ENHANCEMENTS.md) (5 min read)
