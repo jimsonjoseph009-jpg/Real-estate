@@ -1,19 +1,19 @@
 # Real Estate Management System - Project Deliverables Index
 
-## 📦 Complete Project Package
+## Complete Project Package
 
 This is a **fully functional, production-ready Real Estate Management System** built from scratch with modern web technologies.
 
 ---
 
-## 🎯 Quick Navigation
+## Quick Navigation
 
-### 📖 Start Here
+###  Start Here
 - **[README.md](README.md)** - Project overview and setup instructions
 - **[QUICK_START.md](QUICK_START.md)** - Get running in 5 minutes
 - **[COMPLETION_CHECKLIST.md](COMPLETION_CHECKLIST.md)** - Full deliverables list
 
-### 📚 Documentation
+###  Documentation
 - **[docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md)** - Comprehensive 60+ page project report
 - **[docs/DATABASE_DESIGN.md](docs/DATABASE_DESIGN.md)** - Database schema and normalization (3NF)
 - **[docs/SYSTEM_ARCHITECTURE.md](docs/SYSTEM_ARCHITECTURE.md)** - Complete system architecture
@@ -26,20 +26,20 @@ This is a **fully functional, production-ready Real Estate Management System** b
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 Real Estate Management System/
 │
-├── 📄 ROOT FILES (Setup & Overview)
+├──  ROOT FILES (Setup & Overview)
 │   ├── README.md                    ✅ Setup instructions & overview
 │   ├── QUICK_START.md               ✅ 5-minute quick start guide
 │   └── COMPLETION_CHECKLIST.md      ✅ Detailed deliverables checklist
 │
-├── 🗄️ DATABASE/
+├──  DATABASE/
 │   └── real_estate_db.sql          ✅ MySQL schema (8 normalized tables, 3NF)
 │
-├── 🔌 BACKEND/ (Node.js/Express)
+├──  BACKEND/ (Node.js/Express)
 │   ├── src/
 │   │   ├── app.js                  ✅ Express server setup
 │   │   ├── config/
@@ -60,7 +60,7 @@ Real Estate Management System/
 │   ├── package.json                ✅ Dependencies
 │   └── .env.example                ✅ Configuration template
 │
-├── 🎨 FRONTEND/ (Vanilla JS/HTML5/CSS3)
+├──  FRONTEND/ (Vanilla JS/HTML5/CSS3)
 │   ├── index.html                  ✅ Home & property listing
 │   ├── pages/
 │   │   ├── login.html              ✅ User login page
@@ -79,7 +79,7 @@ Real Estate Management System/
 │   │   └── property-details.js     ✅ Property details logic
 │   └── assets/                     📁 Images & resources
 │
-└── 📚 DOCS/
+└──  DOCS/
     ├── PROJECT_REPORT.md           ✅ 60+ page comprehensive report
     ├── DATABASE_DESIGN.md          ✅ Database schema details
     ├── SYSTEM_ARCHITECTURE.md      ✅ System design & architecture
@@ -171,7 +171,7 @@ Real Estate Management System/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Database Setup
 ```bash
@@ -200,7 +200,7 @@ Frontend runs at: `http://localhost:3000`
 
 ---
 
-## 📊 Project Metrics
+##  Project Metrics
 
 | Metric | Count |
 |--------|-------|
