@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real Estate Management System - Find Your Dream Property">
+    <title>Real Estate Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-building"></i>
+                <span>RealEstateHub</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#" class="nav-link" onclick="document.getElementById('searchModal').style.display='block'">Search</a></li>
+                <li id="authLinks">
+                    <a href="pages/login.html" class="nav-link btn-login">Login</a>
+                    <a href="pages/register.html" class="nav-link btn-register">Register</a>
+                </li>
+                <li id="userLinks" style="display:none;">
+                    <span class="nav-link" id="userNameDisplay"></span>
+                    <a href="#" class="nav-link" onclick="logout()">Logout</a>
+                </li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Property</h1>
+            <p>Discover premium real estate opportunities with ease</p>
+            <div class="hero-search">
+                <input type="text" placeholder="Search by city, location..." id="heroSearch" class="search-input">
+                <button onclick="performSearch()" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <h2>Featured Properties</h2>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="priceFilter" class="filter-select">
+                    <option value="">All Prices</option>
+                    <option value="0-500000">Under $500K</option>
+                    <option value="500000-1000000">$500K - $1M</option>
+                    <option value="1000000-2000000">$1M - $2M</option>
+                    <option value="2000000-999999999">Above $2M</option>
+                </select>
+                <select id="bedroomFilter" class="filter-select">
+                    <option value="">All Bedrooms</option>
+                    <option value="1">1 Bedroom</option>
+                    <option value="2">2 Bedrooms</option>
+                    <option value="3">3 Bedrooms</option>
+                    <option value="4">4+ Bedrooms</option>
+                </select>
+                <button onclick="clearFilters()" class="btn btn-secondary">Clear Filters</button>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Properties will be loaded here -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Loading properties...
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <h3 id="totalProperties">0</h3>
+                <p>Properties Listed</p>
+            </div>
+            <div class="stat-item">
+                <h3>1000+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Professional Agents</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Your trusted platform for finding and listing real estate properties.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Properties</a></li>
+                        <li><a href="#">Agents</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@realestate.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Real Estate Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('searchModal').style.display='none'">&times;</span>
+            <h2>Advanced Search</h2>
+            <form id="advancedSearchForm">
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="searchLocation" placeholder="City or area">
+                </div>
+                <div class="form-group">
+                    <label>Min Price</label>
+                    <input type="number" id="searchMinPrice" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Max Price</label>
+                    <input type="number" id="searchMaxPrice" placeholder="9999999">
+                </div>
+                <div class="form-group">
+                    <label>Bedrooms</label>
+                    <input type="number" id="searchBedrooms" placeholder="Any">
+                </div>
+                <button type="button" onclick="performAdvancedSearch()" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
