@@ -554,5 +554,4 @@ GET /properties/category/2?page=1&limit=15
 
 ---
 
-**Last Updated**: 2026-02-01
 **Status**: Ready for integration and testing
