@@ -8,7 +8,7 @@
 ### Backend API
 - ✅ Server running on localhost:5000
 - ✅ Database connected (XAMPP MySQL)
-- ✅ All endpoints responding
+- ✅ All endpoints responding.
 
 ### Endpoints Tested
 - ✅ GET / - Health check
@@ -25,7 +25,7 @@
 - ✅ Home page loading with Netflix theme
 - ✅ CSS styling applied correctly
 - ✅ JavaScript modules loaded
-- ✅ Responsive design working
+- ✅ Responsive design working.
 
 ### Database
 - ✅ All 8 tables verified
