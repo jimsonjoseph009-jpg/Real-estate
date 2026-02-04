@@ -8,7 +8,7 @@
 ### Backend API
 - ✅ Server running on localhost:5000
 - ✅ Database connected (XAMPP MySQL)
-- ✅ All endpoints responding.
+- ✅ All endpoints responding
 
 ### Endpoints Tested
 - ✅ GET / - Health check
