@@ -1,6 +1,6 @@
 # Real Estate Management System - Project Setup & Installation Guide
 
-## Prerequisites
+## Prerequisites.
 
 - **Node.js** (v14 or higher)
 - **MySQL** (v5.7 or higher)
