@@ -81,7 +81,7 @@ My Real Estate Management System now includes **enterprise-grade CRUD operations
 
 ### 3. **Advanced Search & Filtering**
 
-**Property Filters:**
+**Property Filters**
 ```
 - City (exact match)
 - Price range (minPrice, maxPrice)
