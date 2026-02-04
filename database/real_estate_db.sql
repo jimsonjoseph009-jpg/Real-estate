@@ -318,6 +318,5 @@ END$$
 
 DELIMITER ;
 
--- Grant Privileges
 GRANT ALL PRIVILEGES ON real_estate_system.* TO 'realestate_user'@'localhost' IDENTIFIED BY 'SecurePassword123!';
 FLUSH PRIVILEGES;
